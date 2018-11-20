@@ -44,6 +44,7 @@ class Tuner {
     } else {
       let note = this.noteFromPitch(ac)
       this.domAdapter.test.innerHTML = this.settings.notes[note%12]
+      this.domAdapter.stars1.animation = `animStar ${note}s linear infinite`
     }
 
     if (!window.requestAnimationFrame)
