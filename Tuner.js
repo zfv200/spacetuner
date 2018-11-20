@@ -1,6 +1,7 @@
 class Tuner {
 
-  constructor(){
+  constructor(domAdapter){
+    this.domAdapter = domAdapter
     this.audioctx = new AudioContext()
     this.settings = new Settings()
     this.mediaStreamSource = null
@@ -42,7 +43,7 @@ class Tuner {
       //probably don't do anything?
     } else {
       let note = this.noteFromPitch(ac)
-      document.getElementById('test').innerHTML = this.settings.notes[note%12]
+      this.domAdapter.test.innerHTML = this.settings.notes[note%12]
     }
 
     if (!window.requestAnimationFrame)
