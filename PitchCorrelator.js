@@ -1,4 +1,5 @@
 class PitchCorrelator{
+  
   constructor(){
     this.minSamples = 0
     this.qualifiedCorrelation = 0.9
