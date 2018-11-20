@@ -68,7 +68,7 @@ class PitchCorrelator{
   }
 
   lowSignal(rms){
-    return rms < 0.01 ? true : false
+    return rms < 0.05 ? true : false
   }
 
 }
