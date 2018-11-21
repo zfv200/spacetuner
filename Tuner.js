@@ -10,6 +10,7 @@ class Tuner {
     this.buf = new Float32Array(this.settings.buflength)
     this.rafId = null
     this.correlator = new PitchCorrelator(this.buf)
+    this.starclass = new Starclass()
   }
 
   getUserMedia(settings, callback){
@@ -49,7 +50,7 @@ class Tuner {
       console.log(this.centsOffFromPitch(ac, note));
       let margin = this.centsOffFromPitch(ac, note)
       //make a tuner class here
-      // document.getElementById('stars1').className = "tuning"
+      this.starclass.applyClassesToStars(margin)
     }
 
     if (!window.requestAnimationFrame)

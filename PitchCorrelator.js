@@ -14,7 +14,7 @@ class PitchCorrelator{
     let rms = 0
     let foundGoodCorrelation = false
     let lastCorrelation = 1
-    debugger
+
     rms = this.RMSer(buf, rms, size)
 
     if (this.lowSignal(rms)){
