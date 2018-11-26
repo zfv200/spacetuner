@@ -8,26 +8,48 @@ html {
   width: 5px;
   height: 5px;
   background-color: transparent;
-  /* box-shadow: 120px 80px 40px 20px #0ff; */
+  box-shadow: 120px 80px 40px 20px #0ff;
   margin-left: 0%;
   margin-top: 0%;
 }
 
-.tuning-closer {
+.closer {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  box-shadow: 120px 80px 40px 20px #0ff;
+  margin-left: 0%;
+  margin-top: 0%;
   animation: animateBoxCloser 1s linear infinite;
 }
 
-.tuning-further {
+.further {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  box-shadow: 120px 80px 40px 20px #0ff;
+  margin-left: 0%;
+  margin-top: 0%;
   animation: animateBoxFurther 1s linear infinite;
 }
 
+.inTune {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  box-shadow: 120px 80px 40px 20px #008000;
+  margin-left: 0%;
+  margin-top: 0%;
+}
+
+/*
 .red {
   box-shadow: 120px 80px 40px 20px #ff0000
 }
 
 .green {
   box-shadow: 120px 80px 40px 20px #008000
-}
+} */
 
 @keyframes animateBoxCloser {
   to {

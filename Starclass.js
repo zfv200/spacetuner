@@ -1,7 +1,7 @@
 class Starclass {
   constructor(){
     this.stars = Array.prototype.slice.call(document.querySelectorAll('.star'))
-    this.startingMargin = 0
+    this.startingMargin = 50
     this.currentNote = null
   }
 
@@ -12,23 +12,21 @@ class Starclass {
     this.startingMargin = pitchCentsOff
     console.log(pitchCentsOff);
     this.stars.map(star=>{
-      //if it's sharp
-      if (Math.abs(pitchCentsOff)<8){
-        debugger;
-      } else if (Math.abs(pitchCentsOff)===pitchCentsOff){
-        star.className = "red"
-      //if it's flat:
-      } else if (Math.abs(pitchCentsOff)!==pitchCentsOff){
-        star.className = "green"
-      //tuning logic here, switch statement for value?
-      }
+      star.className = direction
     })
   }
 
   moveCloserOrFurther(pitchCentsOff, startingMargin, currentNote, newNote){
+    if (Math.abs(pitchCentsOff)>startingMargin){
+      return "closer"
+    }
+    if (Math.abs(pitchCentsOff)<8){
+      return "inTune"
+    }
     if (currentNote===newNote && (Math.abs(pitchCentsOff) < Math.abs(startingMargin))){
       return "closer"
     } else {
+      debugger;
       return "further"
     }
   }
