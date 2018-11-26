@@ -50,7 +50,7 @@ class Tuner {
       console.log(this.centsOffFromPitch(ac, note));
       let margin = this.centsOffFromPitch(ac, note)
       //make a tuner class here
-      this.starclass.applyClassesToStars(margin)
+      this.starclass.applyClassesToStars(margin, this.settings.notes[note%12])
     }
 
     if (!window.requestAnimationFrame)
