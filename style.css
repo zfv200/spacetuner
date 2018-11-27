@@ -4,22 +4,63 @@ html {
   overflow: hidden;
 }
 
-#stars1{
+#stars1 {
+  width: 2px;
+  height: 2px;
+  background-color: transparent;
+  box-shadow: 15px 10px 5px 2px #ffffff;
+  margin-left: 0%;
+  margin-top: 0%;
+}
+
+.closer {
   width: 5px;
   height: 5px;
   background-color: transparent;
   box-shadow: 120px 80px 40px 20px #0ff;
   margin-left: 0%;
   margin-top: 0%;
+  animation: animateBoxCloser 10s linear infinite;
 }
 
-.tuning{
-  animation: animateBox 1s linear infinite;
+.further {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  box-shadow: 120px 80px 40px 20px #0ff;
+  margin-left: 0%;
+  margin-top: 0%;
+  animation: animateBoxFurther 10s linear infinite;
 }
 
-@keyframes animateBox {
+.inTune {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  box-shadow: 120px 80px 40px 20px #008000;
+  margin-left: 0%;
+  margin-top: 0%;
+}
+
+/*
+.red {
+  box-shadow: 120px 80px 40px 20px #ff0000
+}
+
+.green {
+  box-shadow: 120px 80px 40px 20px #008000
+} */
+
+@keyframes animateBoxCloser {
   to {
     margin-left: 40%;
     margin-top: 20%;
+  }
+}
+
+@keyframes animateBoxFurther {
+  to {
+    margin-left: 0%;
+    margin-top: 0%;
   }
 }
