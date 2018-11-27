@@ -1,4 +1,5 @@
 class Starclass {
+
   constructor(){
     this.stars = Array.prototype.slice.call(document.querySelectorAll('.star'))
     this.startingMargin = 50
@@ -12,6 +13,8 @@ class Starclass {
     this.startingMargin = pitchCentsOff
     console.log(pitchCentsOff);
     this.stars.map(star=>{
+      debugger
+      star.style.left = "100px"
       star.className = direction
     })
   }
